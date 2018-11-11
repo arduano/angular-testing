@@ -1,3 +1,4 @@
+import { HeckComponent } from './app/heck/heck.component';
 import { enableProdMode } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
