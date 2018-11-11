@@ -19,11 +19,11 @@ input[type='checkbox'] {
 
 .circle {
   -webkit-transform: rotate(360deg);
-  background: #9351A6;
+  background: #0000FF;
   border-radius: 50%;
   margin: 20px auto;
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
 }
 
 .smooth {
