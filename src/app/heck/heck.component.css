@@ -18,12 +18,12 @@ input[type='checkbox'] {
 }
 
 .circle {
-  /*-webkit-transform: rotate(360deg);*/
+  -webkit-transform: rotate(360deg);
   background: #9351A6;
   border-radius: 50%;
   margin: 20px auto;
   width: 200px;
-  height: 900px;
+  height: 200px;
 }
 
 .smooth {
