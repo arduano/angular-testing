@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 import { HeckComponent } from './heck/heck.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { WaterPageComponent } from './water-page/water-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeckComponent
+    HeckComponent,
+    WaterPageComponent
   ],
   imports: [
     BrowserModule,

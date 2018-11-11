@@ -33,8 +33,9 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppRoutingModule", function() { return AppRoutingModule; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _water_page_water_page_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./water-page/water-page.component */ "./src/app/water-page/water-page.component.ts");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -43,14 +44,17 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 };
 
 
-var routes = [];
+
+var routes = [
+    { path: 'yes', component: _water_page_water_page_component__WEBPACK_IMPORTED_MODULE_0__["WaterPageComponent"] }
+];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {
     }
     AppRoutingModule = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
-            imports: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"].forRoot(routes)],
-            exports: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"]]
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
+            imports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"].forRoot(routes)],
+            exports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"]]
         })
     ], AppRoutingModule);
     return AppRoutingModule;
@@ -67,7 +71,7 @@ var AppRoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!--The content below is only a placeholder and can be replaced.-->\r\n<div style=\"text-align:center\">\r\n  <h1>\r\n    Welcome to {{ title }}!\r\n  </h1>\r\n  <img width=\"300\" alt=\"Angular Logo\" src=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==\">\r\n</div>\r\n\r\n<app-heck [hecks]='presses'></app-heck>\r\n\r\n<router-outlet></router-outlet>\r\n"
+module.exports = "<div *ngIf=\"this.router.url == '/'\"><a href=\"yes\">Go to yes</a></div>\r\n<div [ngClass]=\"{ 'page': true }\" ><router-outlet></router-outlet></div>\r\n"
 
 /***/ }),
 
@@ -78,7 +82,7 @@ module.exports = "<!--The content below is only a placeholder and can be replace
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FwcC5jb21wb25lbnQuc2FzcyJ9 */"
+module.exports = ".page {\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  overflow: hidden;\n  z-index: -1; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvRzpcXFBlcnNvbmFsXFwyMDE4XFxBbmd1bGFyXFxhbmd1bGFyLXRlc3Rpbmcvc3JjXFxhcHBcXGFwcC5jb21wb25lbnQuc2FzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLG1CQUFrQjtFQUNsQixPQUFNO0VBQ04sVUFBUztFQUNULFFBQU87RUFDUCxTQUFRO0VBQ1IsaUJBQWdCO0VBQ2hCLFlBQVcsRUFBRyIsImZpbGUiOiJzcmMvYXBwL2FwcC5jb21wb25lbnQuc2FzcyIsInNvdXJjZXNDb250ZW50IjpbIi5wYWdlIHtcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgdG9wOiAwO1xuICAgIGJvdHRvbTogMDtcbiAgICBsZWZ0OiAwO1xuICAgIHJpZ2h0OiAwO1xuICAgIG92ZXJmbG93OiBoaWRkZW47XG4gICAgei1pbmRleDogLTE7IH1cbiJdfQ== */"
 
 /***/ }),
 
@@ -93,15 +97,21 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppComponent", function() { return AppComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
 
 var AppComponent = /** @class */ (function () {
-    function AppComponent() {
+    function AppComponent(router) {
+        this.router = router;
         this.title = 'angular-testing';
         this.presses = 69;
     }
@@ -110,7 +120,8 @@ var AppComponent = /** @class */ (function () {
             selector: 'app-root',
             template: __webpack_require__(/*! ./app.component.html */ "./src/app/app.component.html"),
             styles: [__webpack_require__(/*! ./app.component.sass */ "./src/app/app.component.sass")]
-        })
+        }),
+        __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"]])
     ], AppComponent);
     return AppComponent;
 }());
@@ -135,12 +146,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
 /* harmony import */ var _heck_heck_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./heck/heck.component */ "./src/app/heck/heck.component.ts");
 /* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/fesm5/animations.js");
+/* harmony import */ var _water_page_water_page_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./water-page/water-page.component */ "./src/app/water-page/water-page.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -154,7 +167,8 @@ var AppModule = /** @class */ (function () {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
             declarations: [
                 _app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"],
-                _heck_heck_component__WEBPACK_IMPORTED_MODULE_4__["HeckComponent"]
+                _heck_heck_component__WEBPACK_IMPORTED_MODULE_4__["HeckComponent"],
+                _water_page_water_page_component__WEBPACK_IMPORTED_MODULE_6__["WaterPageComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
@@ -190,7 +204,7 @@ module.exports = ".container {\r\n  text-align: center;\r\n}\r\n\r\ninput[type='
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\r\n  HheCckK works!\r\n</p>\r\n<button (click)=\"heck()\">heck</button>\r\n<p>You have heck'd {{hecks}} times!</p>\r\n<p>Click below for magik circle stuff</p>\r\n<input type=\"checkbox\" ng-model=\"boxClass\" (click)=\"toggleBox()\"/>\r\n<div [ngClass]=\"{'smooth': true, 'box': boxClass, 'circle': !boxClass} \"></div>"
+module.exports = "<p style=\"margin-top:0px;\">\r\n  HheCckK works!\r\n</p>\r\n<button (click)=\"heck()\">heck</button>\r\n<p>You have heck'd {{hecks}} times!</p>\r\n<p>Click below for magik circle stuff</p>\r\n<input type=\"checkbox\" ng-model=\"boxClass\" (click)=\"toggleBox()\"/>\r\n<div [ngClass]=\"{'smooth': true, 'box': boxClass, 'circle': !boxClass} \"></div>"
 
 /***/ }),
 
@@ -241,6 +255,69 @@ var HeckComponent = /** @class */ (function () {
         __metadata("design:paramtypes", [])
     ], HeckComponent);
     return HeckComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/water-page/water-page.component.html":
+/*!******************************************************!*\
+  !*** ./src/app/water-page/water-page.component.html ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<!----><!---->\n<div class=\"bg\">\n  \n  <app-heck [hecks]='123'>\n</app-heck></div>\n"
+
+/***/ }),
+
+/***/ "./src/app/water-page/water-page.component.sass":
+/*!******************************************************!*\
+  !*** ./src/app/water-page/water-page.component.sass ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".bg {\n  background-color: #5555ff;\n  width: 100%;\n  height: 100%; }\n\n.p {\n  margin: 0px; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvd2F0ZXItcGFnZS9HOlxcUGVyc29uYWxcXDIwMThcXEFuZ3VsYXJcXGFuZ3VsYXItdGVzdGluZy9zcmNcXGFwcFxcd2F0ZXItcGFnZVxcd2F0ZXItcGFnZS5jb21wb25lbnQuc2FzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLDBCQUF5QjtFQUN6QixZQUFXO0VBQ1gsYUFBWSxFQUFHOztBQUNuQjtFQUNJLFlBQVcsRUFBRyIsImZpbGUiOiJzcmMvYXBwL3dhdGVyLXBhZ2Uvd2F0ZXItcGFnZS5jb21wb25lbnQuc2FzcyIsInNvdXJjZXNDb250ZW50IjpbIi5iZyB7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogIzU1NTVmZjtcbiAgICB3aWR0aDogMTAwJTtcbiAgICBoZWlnaHQ6IDEwMCU7IH1cbi5wIHtcbiAgICBtYXJnaW46IDBweDsgfVxuXG4iXX0= */"
+
+/***/ }),
+
+/***/ "./src/app/water-page/water-page.component.ts":
+/*!****************************************************!*\
+  !*** ./src/app/water-page/water-page.component.ts ***!
+  \****************************************************/
+/*! exports provided: WaterPageComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "WaterPageComponent", function() { return WaterPageComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var WaterPageComponent = /** @class */ (function () {
+    function WaterPageComponent() {
+    }
+    WaterPageComponent.prototype.ngOnInit = function () {
+    };
+    WaterPageComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-water-page',
+            template: __webpack_require__(/*! ./water-page.component.html */ "./src/app/water-page/water-page.component.html"),
+            styles: [__webpack_require__(/*! ./water-page.component.sass */ "./src/app/water-page/water-page.component.sass")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], WaterPageComponent);
+    return WaterPageComponent;
 }());
 
 
