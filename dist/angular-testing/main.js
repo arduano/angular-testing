@@ -71,7 +71,7 @@ var AppRoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div *ngIf=\"this.router.url == '/'\"><a href=\"yes\">Go to yes</a></div>\r\n<div [ngClass]=\"{ 'page': true }\" ><router-outlet></router-outlet></div>\r\n"
+module.exports = "<div *ngIf=\"this.router.url == '/'\"><h1><a href=\"yes\">Go to yes</a></h1></div>\r\n<div [ngClass]=\"{ 'page': true }\" ><router-outlet></router-outlet></div>\r\n"
 
 /***/ }),
 
