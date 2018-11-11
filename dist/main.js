@@ -190,7 +190,7 @@ module.exports = ".container {\r\n  text-align: center;\r\n}\r\n\r\ninput[type='
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\r\n  HheCckK works!\r\n</p>\r\n<button (click)=\"heck()\">heck</button>\r\n<p>You have heck'd {{hecks}} times!</p>\r\n<input type=\"checkbox\" ng-model=\"boxClass\" (click)=\"toggleBox()\"/>\r\n<div [ngClass]=\"{'smooth': true, 'box': boxClass, 'circle': !boxClass} \"></div>"
+module.exports = "<p>\r\n  HheCckK works!\r\n</p>\r\n<button (click)=\"heck()\">heck</button>\r\n<p>You have heck'd {{hecks}} times!</p>\r\n<p>Click below for magik circle stuff</p>\r\n<input type=\"checkbox\" ng-model=\"boxClass\" (click)=\"toggleBox()\"/>\r\n<div [ngClass]=\"{'smooth': true, 'box': boxClass, 'circle': !boxClass} \"></div>"
 
 /***/ }),
 
